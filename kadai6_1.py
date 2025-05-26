@@ -5,12 +5,12 @@ import requests
 import pandas as pd
 
 APP_ID = "a2653b3c8097b04bc96b34954a01f949c1f70037"
-API_URL  = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
+API_URL  = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"　#エンドポイントベース。ここから様々な要素が組み合わさってエンドポイントになる。
 
 params = {
     "appId": APP_ID,
     "statsDataId":"0003009692",
-    #"cdArea":"12000,01000", 都道府県別とか言ってるくせにこれを指定するとDETAINFでエラーが出る。生JSONに存在しない？
+    #"cdArea":"12000,01000", 都道府県別とか言ってるくせに地域指定パラメーターのこれを指定するとDETAINFでエラーが出る。生JSONに存在しない？
     "metaGetFlg":"Y",
     "cntGetFlg":"N",
     "explanationGetFlg":"Y",
