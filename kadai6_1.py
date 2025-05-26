@@ -5,7 +5,7 @@ import requests
 import pandas as pd
 
 APP_ID = "a2653b3c8097b04bc96b34954a01f949c1f70037"
-API_URL  = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"　#エンドポイントベース。ここから様々な要素が組み合わさってエンドポイントになる。
+API_URL  = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"　#エンドポイントURLベース。ここから様々な要素が組み合わさってエンドポイントURLになる。 エンドポイントでの取得はGET。
 
 params = {
     "appId": APP_ID,
