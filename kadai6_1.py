@@ -1,3 +1,6 @@
+#全国都道府県別労働力調査　これにした理由は就業人口の推移を見たかったから。
+
+
 import requests
 import pandas as pd
 
@@ -7,6 +10,7 @@ API_URL  = "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData"
 params = {
     "appId": APP_ID,
     "statsDataId":"0003009692",
+    #"cdArea":"12000,01000", 都道府県別とか言ってるくせにこれを指定するとDETAINFでエラーが出る。生JSONに存在しない？
     "metaGetFlg":"Y",
     "cntGetFlg":"N",
     "explanationGetFlg":"Y",
